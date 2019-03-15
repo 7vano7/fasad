@@ -25,12 +25,13 @@ SECRET_KEY = '*7+#rlw=(@d(zj+0ef(ju1a^7ua4&qi3j^5-e$#1jln_c$ymj2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fasad']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'frontend.apps.FrontendConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
