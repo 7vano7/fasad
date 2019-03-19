@@ -1,0 +1,43 @@
+body {
+
+}
+
+.justify-content-center .col-sm-9 {
+    margin-top: 5em;
+    text-align: center;
+}
+
+.justify-content-center .col-sm-4 {
+    margin-top: 3em;
+}
+
+.justify-content-center .col-sm-4 .col-sm-12 {
+    text-align: justify;
+    padding: 5%;
+}
+
+.our-work, .clients {
+    padding-top: 5%;
+}
+
+.main-info {
+    background: url("/static/images/site/2.jpg");
+}
+
+.our-work {
+    background: url("/static/images/site/2.jpg");
+}
+
+.clients {
+    background: url("/static/images/site/2.jpg");
+}
+
+
+.our-work img, .clients img{
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.text-center {
+    width: 100%;
+}
