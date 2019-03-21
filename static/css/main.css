@@ -2,6 +2,10 @@ body {
 
 }
 
+header {
+    margin-bottom: 50px;
+}
+
 .justify-content-center .col-sm-9 {
     margin-top: 5em;
     text-align: center;
@@ -40,4 +44,8 @@ body {
 
 .text-center {
     width: 100%;
+}
+
+.support {
+    margin-top: 5%;
 }
