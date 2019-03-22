@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['fasad']
 # Application definition
 
 INSTALLED_APPS = [
+    'support.apps.SupportConfig',
     'frontend.apps.FrontendConfig',
     'django.contrib.admin',
     'django.contrib.auth',

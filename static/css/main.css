@@ -6,6 +6,23 @@ header {
     margin-bottom: 50px;
 }
 
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.slider {
+    padding: 0;
+    max-height: 80vh;
+}
+
+/*#carouselExampleSlidesOnly {*/
+    /*height: 70vh;*/
+/*}*/
+#carouselExampleSlidesOnly img {
+    /*max-width: 100%;*/
+    max-height: 75vh;
+}
 .justify-content-center .col-sm-9 {
     margin-top: 5em;
     text-align: center;
@@ -21,31 +38,78 @@ header {
 }
 
 .our-work, .clients {
-    padding-top: 5%;
+    padding-top: 3%;
 }
 
 .main-info {
-    background: url("/static/images/site/2.jpg");
+    background-color: #2d77ba33;
+    padding-bottom: 5em;
+}
+
+.main-info .bg-white{
+
+    padding: 15px 0 0 0;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    height: 100%;
+}
+
+.bg-white .fas {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 5em;
 }
 
 .our-work {
-    background: url("/static/images/site/2.jpg");
+    background-color: #1860a166;
+    padding-bottom: 3%;
 }
 
 .clients {
-    background: url("/static/images/site/2.jpg");
+    background-color: #307fc6e6;
+    padding-bottom: 3%;
 }
-
 
 .our-work img, .clients img{
     max-width: 100%;
     margin-bottom: 15px;
 }
 
+.our-work h2, .clients h2 {
+    margin-bottom: 3%;
+}
+
+.our-work h4 {
+    padding-bottom: 15px;
+}
+
 .text-center {
     width: 100%;
 }
 
+.about, .contacts, .dostavka, .factory, .production {
+    padding: 5% 0;
+}
+
+.about h2, .contacts h2, .dostavka h2, .factory h2, .production h2 {
+    margin-bottom: 5%;
+}
+
 .support {
     margin-top: 5%;
+}
+
+.page-footer {
+    padding-top: 5%;
+}
+
+.page-footer .input-group, .page-footer .btn-danger {
+    margin-top: 15px;
+}
+
+.footer-copyright {
+    margin-top: 3%;
+    background-color: #0b72e1;
 }
