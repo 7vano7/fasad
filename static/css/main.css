@@ -54,6 +54,7 @@ header {
     margin-right: 20px;
     margin-bottom: 30px;
     height: 100%;
+    border-radius: 5%;
 }
 
 .bg-white .fas {
@@ -89,12 +90,36 @@ header {
     width: 100%;
 }
 
+.about {
+    background: url("/static/images/site/about.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.factory {
+    background: url("/static/images/site/factory.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
 .about, .contacts, .dostavka, .factory, .production {
     padding: 5% 0;
 }
 
 .about h2, .contacts h2, .dostavka h2, .factory h2, .production h2 {
     margin-bottom: 5%;
+}
+
+.dostavka img, .contacts img {
+    width: 100%;
+    max-width: 900px;
+}
+
+.contacts img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.contacts .row {
+    padding-bottom: 25px;
 }
 
 .support {
