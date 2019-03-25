@@ -31,6 +31,8 @@ ALLOWED_HOSTS = ['fasad']
 # Application definition
 
 INSTALLED_APPS = [
+    'country.apps.CountryConfig',
+    'languages.apps.LanguagesConfig',
     'production.apps.ProductionConfig',
     'support.apps.SupportConfig',
     'frontend.apps.FrontendConfig',
@@ -84,6 +86,9 @@ DATABASES = {
         'PASSWORD': 'cnfhjcnf2007',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
+         'OPTIONS' : {
+                'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
+                },
     }
 }
 
