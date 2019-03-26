@@ -1,0 +1,6 @@
+.idea/workspace.xml
+fasad/__pycache__/*
+menu/__pycache__/*
+support/__pycache__/*
+support/migrations/__pycache__/*
+menu/migrations/__pycache__/*

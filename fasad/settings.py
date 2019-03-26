@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['fasad']
 # Application definition
 
 INSTALLED_APPS = [
+    'pages.apps.PagesConfig',
     'menu.apps.MenuConfig',
     'country.apps.CountryConfig',
     'languages.apps.LanguagesConfig',
