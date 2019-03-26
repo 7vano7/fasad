@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'production.apps.ProductionConfig',
     'support.apps.SupportConfig',
     'frontend.apps.FrontendConfig',
+    'django_admin_multiple_choice_list_filter',
+    'django_admin_listfilter_dropdown',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -117,7 +120,24 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'en-us'
+
+LANGUAGE_CODE = 'ru'
+
+# список доступных языков
+#LANGUAGES = (
+#    ('ru', 'Russian'),
+#    ('uk', 'Ukrainian'),
+#)
+
+# включаем систему перевода django
+USE_I18N = True
+
+# указываем, где лежат файлы перевода
+LOCALE_PATHS = (
+    'locale',
+    # os.path.join(PROJECT_DIR, 'locale'),
+)
 
 TIME_ZONE = 'UTC'
 
