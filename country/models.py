@@ -6,3 +6,10 @@ class Country (models.Model):
     phone_code = models.CharField(max_length=50)
     name = models.CharField(max_length=255, unique=True)
 
+    def get_list():
+        array = {'':'--Select--'}
+        countries = Country.objects.all()
+        if  countries:
+            for country in countries:
+                array.update({country.name:country.name})
+        return array

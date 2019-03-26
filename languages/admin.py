@@ -1,14 +1,13 @@
+from django import forms
 from django.contrib import admin
 from .models import Language
 
 @admin.register(Language)
 class LanguageAdmin(admin.ModelAdmin):
-    list_display = ('name', 'iso_code')
+    exclude = ('main','iso_code',)
+    list_display = ('name', 'iso_code', 'status', 'main')
 
-# Define the admin class
-#class LanguageAdmin(admin.ModelAdmin):
-#    pass
-
-#admin.site.register(Language, LanguageAdmin)
-
-# Register your models here.
+    def formfield_for_choice_field(self, db_field, request, **kwargs):
+        if db_field.name == "status":
+            kwargs['choice'] = ((STATUS_ACTIVE, STATUS_ACTIVE), (STATUS_ACTIVE, STATUS_ACTIVE)),
+        return super(LanguageAdmin, self).formfield_for_choice_field(db_field, request, **kwargs)
