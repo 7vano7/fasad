@@ -7,9 +7,9 @@ class Country (models.Model):
     name = models.CharField(max_length=255, unique=True)
 
     def get_list():
-        array = {'':'--Select--'}
+        array = [('','--Select--'),]
         countries = Country.objects.all()
         if  countries:
             for country in countries:
-                array.update({country.name:country.name})
+                array.append((country.name, country.name))
         return array
