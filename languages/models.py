@@ -12,4 +12,15 @@ class Language (models.Model):
     status = models.CharField(max_length=50)
     main = models.CharField(max_length=50)
 
+    def get_list(status = False):
+         array = [('','--Select--'),]
+         languages = Language.objects.all()
+         if(languages):
+            for lang in languages:
+                array.append((lang.iso_code, lang.iso_code))
+         return array
+
+
+
+
 
