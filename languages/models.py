@@ -14,7 +14,10 @@ class Language (models.Model):
 
     def get_list(status = False):
          array = [('','--Select--'),]
-         languages = Language.objects.all()
+         if(status == True):
+            languages = Language.objects.filter(status = Language.STATUS_ACTIVE)
+         else:
+            languages = Language.objects.all()
          if(languages):
             for lang in languages:
                 array.append((lang.iso_code, lang.iso_code))

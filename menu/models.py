@@ -9,8 +9,17 @@ class Menu(models.Model):
     status = models.CharField(max_length=50, choices=LIST_STATUSES)
     url = models.CharField(unique=True, max_length=255, blank=True, default=None)
 
+    def relations(key = False):
+        if key:
+            result = MenuLang.objects.filter(menu_id = key, lang='uk')
+            if result:
+                return result
+            else:
+                return MenuLang()
+        else:
+            return MenuLang()
 
 class MenuLang(models.Model):
-    menu_id = models.IntegerField()
+    menu = models.ForeignKey(Menu, on_delete=models.CASCADE)
     name = models.CharField(max_length=255, blank=True, default=None)
     lang = models.CharField(max_length=255, blank=True, default=None)
